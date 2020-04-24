@@ -11,6 +11,18 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'movie',
+    loadChildren: () => import('./movie/movie.module').then( m => m.MoviePageModule)
+  },
+  {
+    path: 'movie1',
+    loadChildren: () => import('./movie1/movie1.module').then( m => m.Movie1PageModule)
+  },
+  {
+    path: 'movie2',
+    loadChildren: () => import('./movie2/movie2.module').then( m => m.Movie2PageModule)
+  },
 ];
 
 @NgModule({

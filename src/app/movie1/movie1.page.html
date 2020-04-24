@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <!--Back button to return to the home page-->
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>The Lord of the Rings</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <!--Card layout for displaying data-->
+  <ion-card *ngFor="let movie of MovieData">
+    <!--Displaying movie poster-->
+    <img src="{{movie.Poster}}" />
+    <ion-card-header>
+      <ion-card-subtitle>Title</ion-card-subtitle>
+      <!--Displaying movie title-->
+      <ion-card-title>{{movie.Title}}</ion-card-title>
+    </ion-card-header>
+    <!--Displaying the year the movie came out-->
+    <ion-card-content>
+      {{movie.Year}}
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
